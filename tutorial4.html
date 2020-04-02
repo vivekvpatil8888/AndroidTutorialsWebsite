@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            width: 180px;
+            position: fixed;
+            z-index: 1;
+            top: 60px;
+            left: 10px;
+            background: #eee;
+            overflow-x: hidden;
+            padding: 8px 0;
+        }
+
+        p {
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #2196F3;
+            display: block;
+        }
+
+        .section {
+            padding-top: 20px;
+        }
+
+        .sidenav a:hover {
+            color: #064579;
+        }
+
+        .main {
+            margin-left: 140px;
+            /* Same width as the sidebar + left position in px */
+            font-size: 18px;
+            /* Increased text to enable scrolling */
+            padding: 100px 100px;
+
+            padding-top: 20px;
+
+        }
+
+        img {
+            border: 1px solid #021a40;
+        }
+
+        b {
+            font-size: 24px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body style="height:1500px">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">SWEN 101 - Software Engineering Freshmen Seminar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="sidenav">
+            <a href="#part1">Part 1: Adding Images in Android Project</a>
+            <a href="#part2">Part 2: Building User Interface</a>
+            <a href="#part3">Part 3: Adding the Functionality</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Tutorial 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial2.html">Tutorial 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial3.html">Tutorial 3</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./tutorial4.html">Tutorial 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial5.html">Tutorial 5</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main" style="margin-top:50px">
+        <h3>
+            <b>Introduction to User Interface Elements in Android</b>
+        </h3>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    <b>Objectives:</b> In this tutorial you will learn how to use different User Interface elements provided
+                    by Android Studio. At the end of the session you will be able to,
+                </p>
+                <ul>
+                    <li>Use Radio Buttons for selection of available options to user.</li>
+                    <li>Use Progress Bar while next page is loading.</li>
+                    <li>Display images in Android application.</li>
+                </ul>
+                <p>In this session we are going to create an application in which the user will be able to choose an image to
+                    display. </p>
+                <p>The user can select an image of either a cat or a dog using radio button and click next.</p>
+                <img src="images/tutorial4/img1.png">
+                <img src="images/tutorial4/img2.png">
+                <img src="images/tutorial4/img3.png">
+                <br>
+                <hr>
+                <section id="part1">
+                    <p>
+                        <b>Part 1: Adding Images in Android Project</b>
+                    </p>
+                    <ul>
+                        <li>
+                            You first task is to find and download two images, one of a dog and the other is a cat. Each image should be less than 500kb
+                            in size.
+                        </li>
+                        <img src="images/tutorial4/img4.png">
+                        <li>
+                            Rename the images to cat.jpg and dog.jpg respectively.
+                        </li>
+                        <li>
+                            Now copy the images from where they are stored on your computer.
+                        </li>
+                        <img src="images/tutorial4/img5.png">
+                        <br>
+                        <img src="images/tutorial4/img7.png">
+                        <br>
+                        <img src="images/tutorial4/img20.png">
+                        <li>
+                            Now open your project. The images of your project will be stored in a folder named 'drawable' which is located inside 'res'
+                            folder. Expand it in project window.
+                        </li>
+                        <li>
+                            Right click on 'drawable' folder and click on paste.
+                        </li>
+                        <li>
+                            Click Ok on next windows. Now you will be able to see the image names listed in drawable folder. Refer the images.
+                        </li>
+
+                    </ul>
+                </section>
+                <hr>
+                <section id="part2">
+                    <p>
+                        <b>Part 2: Building User Interface</b>
+                    </p>
+                    <p>The image shown below are the two layouts we are going to create. </p>
+                    <img src="images/tutorial4/img8.png">
+                    <ul>
+                        <li>
+                            Open activity_1.
+                        </li>
+                        <li>
+                            Change the text to ‘Select your Animal’ and change it’s position and size accordingly.
+                        </li>
+
+                        <img src="images/tutorial4/img9.png">
+
+                        <li>
+                            Select the ‘RadioGroup’ from Palette -> Buttons.
+                        </li>
+                        <li>
+                            Adjust the size and position of RadioGroup. Remember, this area will contain both radio buttons.
+                        </li>
+                        <li>
+                            Change the ID of RadioGroup to ‘radioGroupId’
+                        </li>
+                        <img src="images/tutorial4/img10.png">
+                        <li>
+                            Now, add two radio button and position them as shown in image.
+                        </li>
+                        <li>
+                            Change the text, ID and textSize of ‘cat’ radiobutton as shown in the image.
+                        </li>
+                        <li>
+                            Make the same changes for ‘dog’ radio button.
+                        </li>
+                        <li>
+                            Change the text of the button to ‘Next’.
+                        </li>
+                        <img src="images/tutorial4/img11.png">
+                        <img src="images/tutorial4/img12.png">
+                        <li>
+                            Add a circular progressbar from ‘widgets’. Make sure it does covers more space than the radio group as shown in the image.
+                            Give it ID as ‘simpleProgressBar’.
+                        </li>
+                        <img src="images/tutorial4/img13.png">
+                        <li>
+                            Make it’s visibility to ‘invisible’.
+                        </li>
+
+                        <li>
+                            Go to activity_2.
+                        </li>
+                        <li>
+                            Go to Palette -> Common
+                        </li>
+                        <li>
+                            Drag and drop the 'ImageView' on the page.
+                        </li>
+                        <li>
+                            To select the resource, expand 'Project'.
+                        </li>
+                        <img src="images/tutorial4/img14.png">
+                        <img src="images/tutorial4/img15.png">
+                        <li>
+                            Select image of cat of dog.
+                        </li>
+                        <li>
+                            Click ok.
+                        </li>
+                        <li>
+                            Resize it appropriately and give ID as 'imageView'.
+                        </li>
+                        <li>
+                            Rename the button to 'Back'.
+                        </li>
+                        <img src="images/tutorial4/img16.png">
+                    </ul>
+
+                </section>
+                <hr>
+                <section id="part3">
+                    <p>
+                        <b>Part 3: Adding the Functionality</b>
+                    </p>
+                    <p>Enter the code highlighted in the following image in Activity1.java</p>
+                    <p>Let’s explore different concepts in the following code.</p>
+                    <p>A RadioGroup class is used for set of radio buttons.</p>
+                    <p>If we check one radio button that belongs to a radio group, it automatically unchecks any previously
+                        checked radio button within the same group. To use a radiogroup and progressbar import statement
+                        is used to invoke the packages which contains RadioGroup and ProgressBar widgets.</p>
+                    <p>Variable of type RadioGroup is created and initialized to the value of ‘radioGroupId’ which we have included
+                        in our layout file.</p>
+                    <p>A variable ‘id’ of String type is created.</p>
+                    <p>setOnCheckedChangeListener() method will get triggered whenever the user will select either of the radio
+                        buttons. </p>
+                    <p>onCheckedChange() method will handle the operations to be done when the radiobutton is selected.</p>
+                    <p>The Java switch statement a control statement which executes one statement from multiple conditions.
+                        If radiobutton1 which is of ‘cat’ is selected then ‘id’ is initialized to 1. If radiobutton2 which
+                        is of ‘dog’ is selected then ‘id’ is initialized to 2.
+                    </p>
+                    <p>ProgressBar type variable simpleProgressBar is initiated with the ID of progressbar used in the layout
+                        file. Since we want to see the progressbar while the second screen is being loaded, we are setting
+                        it to ‘visible’ state using setVisibility() method in onClick() function.</p>
+                    <p>Activity2.java is the class responsible to display the image. The decision to select an image to display
+                        depends on the value of ‘id’ variable. But this variable is in Activity1.java. So how would Activity2.java
+                        will use this variable which is not present in its scope ?
+                    </p>
+                    <p>Hence putExtra() method is used where ‘id’ can be sent to next activity which is Activity2.java in this
+                        case. Here ‘id’ is just renamed to ‘SelectedRadioButton’.</p>
+                    <img src="images/tutorial4/img17.png">
+                    <img src="images/tutorial4/img18.png">
+                    <img src="images/tutorial4/img19.png">
+                    <p>Enter the above code in Activity2.java </p>
+                    <p>ImageView package is imported and variable ‘imageViewPhoto’ of its type is declared. imageViewPhoto is
+                        storing the id of ‘imageView2’ which is we have used in the Activity_2 layout file.
+                    </p>
+                    <p>Now, to use any variable from calling activity whichi is Activity2 in this case, we need to use getIntent().getExtra().
+                        Variable ‘extras’ is of type ‘Bundle’ which is used to pass information between activities and other
+                        application components. Variable message stores the value of ‘SelectedRadioButton’. </p>
+                    <p>Here switch statement sets the image resource for the imageView which depends on the value of selected
+                        radio button. You can see that photo of cat or dog is selected from ‘drawable’ folder in setImageResource()
+                        method.</p>
+                    <p>Now check the IDs of all the elements we used in our project till now and make sure all the changes are
+                        saved.</p>
+                    <p>Run the application and check the applications functionality.</p>
+                    <p>Push the changes to your Github’s respective repository.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

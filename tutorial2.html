@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+
+
+        .sidenav {
+            width: 180px;
+            position: fixed;
+            z-index: 1;
+            top: 60px;
+            left: 10px;
+            background: #eee;
+            overflow-x: hidden;
+            padding: 8px 0;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #2196F3;
+            display: block;
+        }
+
+        .section {
+            padding-top: 20px;
+        }
+
+        .sidenav a:hover {
+            color: #064579;
+        }
+
+        .main {
+            margin-left: 140px;
+            /* Same width as the sidebar + left position in px */
+            font-size: 18px;
+            /* Increased text to enable scrolling */
+            padding: 100px 100px;
+
+            padding-top: 20px;
+
+        }
+
+        img {
+            border: 1px solid #021a40;
+        }
+
+        b {
+            font-size: 24px;
+        }
+
+        p {
+            padding-top: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body style="height:1500px">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">SWEN 101 - Software Engineering Freshmen Seminar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Tutorial 1</a>
+                </li>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="./tutorial2.html">Tutorial 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial3.html">Tutorial 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial4.html">Tutorial 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial5.html">Tutorial 5</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main" style="margin-top:50px">
+        <h3>
+            <b>Tutorial 2</b>
+        </h3>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <p>
+
+                    At the end of this session you will be able to,
+
+                </p>
+                <ul>
+                    <li>Understand what version control is
+                    </li>
+                    <li>Learn how to add your project to github
+                    </li>
+                    <li>Learn how to edit your code and save the changes to github
+                    </li>
+                    <li>Learn how to create a project in Android Studio
+                    </li>
+                </ul>
+                <br>
+                <section id="part1">
+
+                    <br>
+                    <br>
+                    <img src="./images/tutorial2/pic1.png"> Fig 1: Version Control Workflow
+                    <p>Version control helps a team to collaborate and work together without any hassles. For easier understanding
+                        of version control workflow, we will use Git. Git helps in developing a project without any repetitions
+                        of a work by various team members and in keeping every member of team up to date.
+                    </p>
+                    <p>The above sketch describes the overview of the workflow and some of the popular terms used during version
+                        control. </p>
+                    <p>Let’s start with our first project.</p>
+                    <ul>
+                        <li>Create a GitHub account by signing up with your email address and a password.
+                        </li>
+                        <li>Once the account is created, this is how it’ll look.
+                        </li>
+                    </ul>
+                    <img src="images/tutorial2/pic2.png">
+                    <p>Fig 2: Screenshot of GitHub Account Page</p>
+                    <p>You can see the list of repositories you have created as well as the repositories you are contributing/contributed
+                        to on the left side.</p>
+                    <ul>Now, let’s create an android project.
+                        <li>Open Android Studio in your PC. Once you do this, a window as shown below will appear.
+
+                        </li>
+                    </ul>
+                    <img src="images/tutorial2/pic3.png">
+                    <ul>
+                        <li>
+                            Since you are creating a new project from scratch, you will click on “Start a new Android Studio Project”. You will be prompted
+                            to another screen where you’ll be asked to give the project name and company domain (a unique
+                            name to identify as yours, you can just give your name here) as seen in the screenshot below.
+                        </li>>
+
+                    </ul>
+                    <img src="images/tutorial2/pic4.png">
+                    <p>
+                        After you have given the name of your application, you’ll be given the option to choose the target devices.
+                    </p>
+                    <img src="images/tutorial2/pic5.png">
+                    <p>In this tutorial you will learn to develop a simple mobile application, so the targeted device you’ll
+                        choose will be “Phone and Tablet” as shown in the screenshot above.
+                    </p>
+                    <p>Now, you’ll be asked to choose an activity type for your application. The activity type is nothing but
+                        a screen form for your application. Based on the application this activity form changes. For this
+                        tutorial, you can select the “empty activity” form as shown in the screenshot.</p>
+                    <img src="images/tutorial2/pic6.png">
+                    <p>Next, you’ll be asked to give the above selected activity a name and a layout name. Android Studio already
+                        gives a suggestion for the names, you can just use those.</p>
+                    <img src="images/tutorial2/pic7.png">
+                    <p>Once you click on “Next”, you’ll get a screen like this:</p>
+                    <p>This screen shows that the project has been successfully created. Now click on “Finish”.</p>
+                    <img src="images/tutorial2/pic8.png">
+                    <p>The above window pops up. This window says that the entire setup required for the project is being built.</p>
+                    <p>Once the built is done, you’ll see a screen like above. Both a jar file and an XML file are created for
+                        the activity.</p>
+                    <p>Now, you will push (When you update the existing project in the repo with the changes you made locally,
+                        that is, you are trying to make some changes to the project.) this project into your earlier created
+                        Git account.</p>
+                    <p>First you are to sign in to your Git account.
+                    </p>
+                    <img src="images/tutorial2/pic9.png">
+                    <img src="images/tutorial2/pic11.png">
+                    <p>Now, click on “New Repository” and give a name to the repo (The database which contains all the files
+                        created).
+                    </p>
+                    <img src="images/tutorial2/pic12.png">
+                    <p>After creating the repo, you’ll see a screen like the one shown below.</p>
+                    <img src="images/tutorial2/pic14.png">
+                    <p>The project is on your Git account. Now, you will be adding your team members as contributors for the
+                        project.
+                    </p>
+                    <p>In the above shown window, click on “Settings” and then on “contributors” present in the left corner.</p>
+                    <img src="images/tutorial2/pic13.png">
+
+                    <p>You can give the names of your team members here and once they accept your invite to collaborate, you
+                        will have a shared repo among each other.</p>
+                    <p>Each team member after accepting the invite can clone the project onto their local system. The option
+                        is available in green color on the right side in the below shown screenshot.</p>
+
+                    <p>Once the team member has his/her copy on their local system, he/she can just open the project and make
+                        any kind of changes.</p>
+                    <p>And when the team member is sure of the changes he/she made, the member can merge (Incorporating the
+                        changes made by you on your local file to the repo) their code into a branch other than the “master
+                        branch” (created by the team leader).
+                    </p>
+                    <p>Before merging the code, one can make a “pull (When you get the last updated version of the project along
+                        with the changes you made locally) request”, by clicking on “New Pull Request” seen on the below
+                        screenshot.
+                    </p>
+                    <p>To check the differences between the branches before merging them, we go a head with pull requests. The
+                        screen looks like this:</p>
+
+                    <img src="images/tutorial2/pic15.png">
+                    <p>Now, a team member can compare the changes and see the differences and then merge their code.</p>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

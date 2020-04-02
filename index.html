@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>SWEN - 101</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            width: 180px;
+            position: absolute;
+            z-index: 1;
+            top: 60px;
+            left: 10px;
+            background: #eee;
+            overflow-x: hidden;
+            padding: 8px 0;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #2196F3;
+            display: block;
+        }
+
+        .section {
+            padding-top: 20px;
+        }
+
+        .sidenav a:hover {
+            color: #064579;
+        }
+
+        .main {
+            margin-left: 140px;
+            /* Same width as the sidebar + left position in px */
+            font-size: 18px;
+            /* Increased text to enable scrolling */
+            padding: 100px 100px;
+
+            padding-top: 20px;
+
+        }
+
+        img {
+            border: 1px solid #021a40;
+        }
+
+        b {
+            font-size: 24px;
+        }
+
+        p {
+            padding-top: 20px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body style="height:1500px">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">SWEN 101 - Software Engineering Freshmen Seminar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="sidenav">
+            <a href="#part1">Part 1: Intro to Android</a>
+            <a href="#part2">Part 2: Android IDE Overview</a>
+            <a href="#part3">Part 3: Running and Building your Application</a>
+            <a href="#part4">Part 4: Version Control System</a>
+            <a href="#codepush">Pushing Project to GitHub</a>
+            <a href="#codecommit">Commiting changes in GitHub</a>
+            <a href="#codebranch">Branching in GitHub</a>
+            <a href="#codepushbranch">Pushing Created Branch in GitHub</a>
+            <a href="#codemerge">Merging in GitHub</a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Tutorial 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial2.html">Tutorial 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial3.html">Tutorial 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial4.html">Tutorial 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial5.html">Tutorial 5</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main" style="margin-top:50px">
+        <h3>
+            <b>Introduction to Android Studio and ‘Hello World’ Project </b>
+        </h3>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    <b>Objectives:</b> In this tutorial you will learn about different windows and tools in Android Studio.
+                    At the end of this session you will be able to,
+
+                </p>
+                <ul>
+                    <li>Use different Android Windows.</li>
+                    <li>Create Android Project.</li>
+                    <li>Run Android Project in an Emulator.</li>
+                    <li>Create and locate your project's apk file. </li>
+                </ul>
+                <br>
+                <section id="part1">
+                    <b>Part 1: Introduction to Android Studio - Creating a New Project</b>
+                    <br>
+                    <br>
+                    <img src="./images/tutorial1/androidversion3.1.2.png">
+                    <p>Android Studio is google's official IDE(Integrated Development Environment) for Android Developers.</p>
+                    <p>Android Studio’s job is to provide the interface for you to create your apps and to handle much of the
+                        complicated file-management behind the scenes. The programming language you will be using is Java
+                        and this is installed separately on your machine. Android Studio is simply where you will write,
+                        edit and save your projects and the files that comprise said projects.</p>
+                    <p>Now we are ready to create our first Android Project. Follow the below steps:</p>
+                    <p>1. Go to ‘File’ -> ‘New Project...’ </p>
+                    <img src="images/tutorial1/newproj.png">
+                    <p>2. Give Application Name as ‘Hello World’ and click ‘Next’</p>
+                    <img src="images/tutorial1/newproj2.png">
+                    <p>3. Select ‘Phone and Tablets’ and click next.</p>
+                    <img src="images/tutorial1/newproj3.png">
+                    <p>4. Select ‘Next’ -> select ‘Empty Activity’ -> Select ‘Next’ -> ‘Finish’</p>
+                    <img src="images/tutorial1/newproj4.png">
+                    <img src="images/tutorial1/newproj5.png">
+                    <hr>
+
+                </section>
+                <hr>
+                <section id="part2">
+                    <!--Part 2: Android IDE Overview-->
+
+                    <b>Part 2: Android IDE Overview</b>
+                    <br>
+                    <br>
+                    <p>After you create new project you should see screen as follows.</p>
+                    <p>You can’t see other windows ? By default only editor window will be shown where other windows will be
+                        in minimized form. The following image shows all the windows in expanded form. Android Studio offers
+                        different tools and window for various purposes.
+                    </p>
+                    <img src="images/tutorial1/window1.png">
+                    <p>Now you should be able to see a New Window with two tabs open named ‘activity_main.xml’ and ‘MainActivity.java’
+                        in editor window.</p>
+                    <p>
+                        <b>1 - Editor Window</b>
+                    </p>
+                    <img src="images/tutorial1/window2.png">
+                    <p>The
+                        <b>editor window</b> is where you create and modify code. By default editor window shows two files which
+                        are layout file (activity_main.xml) and java file (MainActivity.java) . Depending on the current
+                        file type, the editor can change. For example, when viewing a layout file, the editor displays the
+                        Layout Editor.
+                    </p>
+                    <p>
+                        <b>2 - Project Window</b>
+                    </p>
+                    <p>To open project Window, click on project tab located on the left of editor window. Refer following image.
+                    </p>
+                    <img src="images/tutorial1/window3.png">
+                    <p>Now you should be able to see the project window as follows.</p>
+                    <img src="images/tutorial1/window4.png">
+                    <br>
+                    <img src="images/tutorial1/window5.png">
+                    <p>When you start a new project, Android Studio creates the necessary structure for all your files and makes
+                        them visible in the Project window on the left side of the IDE (click View > Tool Windows > Project).
+                        This window provides an overview of the key components inside your project.
+                    </p>
+                    <p>
+                        There are different views/scopes in project window. By default, Android Studio displays your project files in the Android
+                        view. This view does not reflect the actual file hierarchy on disk, but is organized by modules and
+                        file types to simplify navigation between key source files of your project, hiding certain files
+                        or directories that are not commonly used.
+                    </p>
+                    <p>
+                        To see the actual file structure of the project including all files hidden from the Android view, select Project from the
+                        dropdown at the top of the Project window. When you select Project view, you can see a lot more files
+                        and directories.
+                    </p>
+                    <img src="images/tutorial1/window6.png">
+
+                    <p>
+                        <b>3 - Gradle Window</b>
+                    </p>
+                    <p>Click on the tab named ‘Gradle’ present at the upper right section of the IDE. Refer the attached image.</p>
+                    <img src="images/tutorial1/window7.png">
+                    <img src="images/tutorial1/window8.png">
+                    <p>Gradle Window shows gradle files.</p>
+                    <p>In Android Studio, Gradle is a custom build tool used to build android packages (apk files) by managing
+                        dependencies and providing custom build logic. An apk file gets signed and pushed to the device using
+                        ADB(Android Debug Bridge) where it gets executed. Apk file can be used to install the application
+                        in any android device.
+                    </p>
+                    <p>
+                        Note : One should not attempt to edit the gradle files. These are auto-generated files by Android Studio which is more than
+                        sufficient to build your project. Gradle file manipulation is done at high levels which is out of
+                        the scope of this course.
+                    </p>
+                    <p>
+                        <b>4 - Other Windows</b>
+                    </p>
+                    <p>To open Structure Window, just click on the Structure tab present below Project tab. After that you should
+                        see following image. You can open most of the windows, just be clicking on their tabs and close the
+                        windows by clicking opened windows again.
+                    </p>
+                    <p>
+                        <b>i) Structure Window</b>
+                    </p>
+                    <img src="images/tutorial1/window9.png">
+                    <p>
+                        The structured window shows list of methods in your java classes. You can sort them alphabetically or according to their
+                        access modifiers using buttons present at upper left corner in the window.
+                    </p>
+                    <p>
+                        <b>ii) Captures Window</b>
+                    </p>
+                    <p>Captures Window contains the results of monitor tools such as memory or CPU monitor. This window does
+                        not show any information by default.
+                    </p>
+                    <img src="images/tutorial1/window10.png">
+                    <p>
+                        <b>iii) Build Variance Window</b>
+                    </p>
+                    <p>The build variance window lets you manage your build process. By default you are using something called
+                        the debug variant. But there’s also the release variant which you will use when your application
+                        is ready for release.
+                    </p>
+                    <img src="images/tutorial1/window11.png">
+                    <p>
+                        <b>iv) Favorites Window</b>
+                    </p>
+                    <p>
+                        Favorites window gives you a way to get to the classes and other resources that you use most frequently. By default, three
+                        lists are shown for project, bookmarks and breakpoints. You can make any class a favorite by right
+                        clicking and selecting add to favorite.
+                    </p>
+                    <img src="images/tutorial1/window12.png">
+                    <p>
+                        <b>v) Messages Window</b>
+                    </p>
+                    <p>Messages window shows any errors or warnings which occurs while building your application. Typical error
+                        consists of compilation errors due to inaccurate code or a missing statement.
+                    </p>
+                    <img src="images/tutorial1/window13.png">
+                    <p>
+                        <b>vi) TODO Window</b>
+                    </p>
+                    <p>
+                        The TODO window shows a list of all of your ‘to do’ comments. You can make a todo list note just by using double slash in
+                        your code followed by any message.
+                    </p>
+                    <img src="images/tutorial1/window14.png">
+
+                    <p>
+                        <b>vii) Terminal Window</b>
+                    </p>
+                    <p>The Terminal window opens a command prompt through which you can explore the actual files saved in your
+                        computer. It can be used to take a quick look in your computer’s current directory structure and
+                        files.
+                    </p>
+                    <img src="images/tutorial1/window15.png">
+
+                    <hr>
+
+                </section>
+                <hr>
+                <section id="part3">
+                    <p>
+                        <b>Part 3: Running and Building your Application</b>
+                    </p>
+                    <p>Now that we learned about the Android studio environment, let’s run our Hello World application. Follow
+                        the below steps:</p>
+                    <ol>
+                        <li>
+                            Click on the ‘run’ icon present in upper right section of IDE or press ‘Shift + F10’ keyboard shortcut.
+                        </li>
+                        <img src="images/tutorial1/part31.png">
+                        <li>
+                            Now a pop-up window will appear titled ‘Select Deployment Target’. Select a virtual device from the ‘Available Virtual Devices’
+                            by clicking on it.
+                        </li>
+                        <li>
+                            Click ‘OK’.
+                        </li>
+                        <li>
+                            Now you should see a virtual device appeared on the screen with the desired output.
+                        </li>
+                    </ol>
+                    <img src="images/tutorial1/part32.png">
+                    <img src="images/tutorial1/part33.png">
+                    <p>
+                        <u>Building APK File:</u>
+                    </p>
+                    <p>Now we are ready to create and locate ‘Hello World’ application’s apk file. Follow the below steps.</p>
+                    <ol>
+                        <li>
+                            Select 'Build'
+                        </li>
+                        <li>
+                            Select ‘Build APK(s)’
+                        </li>
+                        <li>
+                            Click on ‘locate’ from the pop up at bottom right corner.
+                        </li>
+                        <img src="images/tutorial1/part34.png">
+                        <img src="images/tutorial1/part35.png">
+                        <li>
+                            In case you missed the pop - up from the bottom right, go to Project window, select ‘Project’ scope from the drop down menu
+                        </li>
+                        <li>
+                            Expand ‘Hello World’, then expand ‘app’ -> ‘build’ -> ‘outputs’ -> ‘apk’ -> ‘debug’ as shown in the following image.
+                        </li>
+                    </ol>
+                    <img src="images/tutorial1/part36.png">
+                    <p>
+                        NOTE : The difference between running and building the project is when we run a project only the preview of our app is shown
+                        not the actual app is created whereas in the process of building a project, IDE produces the installable
+                        apk file for us.
+                    </p>
+                </section>
+                <section id="part4">
+                    <b>Part 4: Version Control System</b>
+                    <p>Github is a website for storing your project’s files.</p>
+                    <p>It is powered by Git, which, in its turn, is a version control system, a software to help you manage
+                        files in a versioned, distributed fashion and is optimized towards software source code files.
+                    </p>
+                    <p>It allows you to collaborate with other developers, review any changes they make and file or follow up
+                        with issues on the project’s files or resulting software’s behavior.
+                    </p>
+                    <p>Since Github is one of the Git repository hosting services which is most widely used, Android Studio
+                        provides inbuilt Github integration. We will now upload our Hello World project to Github.
+                    </p>
+                    <p>1. Go to ‘File’ - > ‘Settings’ -> ‘Version Control’ -> ‘GitHub’.</p>
+                    <img src="images/tutorial1/version1.png">
+                    <p>2. Since You don’t have a GitHub account, you will click on Sign Up hyperlink.
+                    </p>
+                    <img src="images/tutorial1/version2.png">
+                    <p>3. Now click on ‘Sign Up’ button after which you should see above screen.
+                    </p>
+                    <p>4. Fill the details appropriately and click on ‘Create an Account’.
+                    </p>
+                    <img src="images/tutorial1/version3.png">
+                    <p>5. From this page select ‘Unlimited public repositories for free’.</p>
+                    <p>Note: Repository is nothing but a folder which will have all your project files. ‘Public Repository’
+                        can be accessed by anyone where as ‘Private Repository’ can only be accessed by the user and authorized
+                        members. This difference is mainly for the security purpose.
+                    </p>
+                    <img src="images/tutorial1/version4.png">
+                    <p>6. This last step is fully optional, you can check the options which you want and submit or skip this
+                        step. </p>
+                    <img src="images/tutorial1/version5.png">
+                    <p>7. Now you should get this github welcome screen.
+                    </p>
+
+
+                </section>
+                <hr>
+                <section id="codepush">
+                    <p>
+                        <b>Pushing your Project to Github: </b>
+                    </p>
+                    <p>
+                        <b>Part 1: </b>
+                    </p>
+                    <p>1. Go to ‘Settings’ -> ‘Version Control’ -> ‘Github'
+                    </p>
+                    <p>2. Select Auth(Authentication) Type as ‘Password'
+                    </p>
+                    <p>3. Now enter your ‘Login’(Github Username) and Password</p>
+                    <p>4. Click ‘OK’.</p>
+                    <p>5. You will see ‘Connection Successful’ message in a pop-up window.</p>
+                    <img src="images/tutorial1/version6.png">
+                    <p>
+                        <b>Part 2: </b>
+                    </p>
+                    <p>1. Go to VCS tab which is present above editor window.</p>
+                    <p>2. Go to ‘import intro VC’ -> ‘Share Project on GitHub’</p>
+                    <img src="images/tutorial1/version7.png">
+                    <img src="images/tutorial1/version8.png">
+                    <p>3. Now give a name to your Repository on github. You can also add description to your project.</p>
+                    <p>4. Click on ‘Share’.</p>
+                    <img src="images/tutorial1/version9.png">
+                    <p>5. On success, you will see a pop-up window at the bottom right.</p>
+                    <p>6. Click on the hyperlink which is ‘HelloWorld’ in the given image.</p>
+                    <img src="images/tutorial1/version10.png">
+                    <p>7. You will be redirected to your github repository which will look like this. Observe how all the files
+                        of your project are uploaded in your github repository.
+                    </p>
+
+                </section>
+                <hr>
+                <section id="codecommit">
+                    <p>
+                        <b>Committing changes in GitHub: </b>
+                    </p>
+                    <p>Now that we’ve understood what repositories are, let's learn how to commit changes to a repository. First,
+                        go back to Android Studio.</p>
+                    <img src="images/tutorial1/commit1.png">
+                    <p>1. Let’s make a change first. Open ‘activity_main.xml’ in Design Mode.
+                    </p>
+                    <p>2. Double click on ‘Hello World’ text. Now you should see an ‘Attributes’ Window on the right side of
+                        IDE.
+                    </p>
+                    <p>3. Change the text to ‘Hello First Commit’ by typing in the box next to ‘text’ in ‘TextView’ and press
+                        enter.
+                    </p>
+                    <img src="images/tutorial1/commit2.png">
+                    <p>Remember, this change won’t be automatically added in Github repository. The changes are saved in your
+                        local machine only. Committing in Github means saving all the changes you made in files at a particular
+                        time. To commit a change we need to first ‘add’ the file to ‘Staging Area’</p>
+                    <p>4. Right click on ‘Hello World’ and click on ‘Add’ as shown in the image. You can also use the keyboard
+                        shortcut. Now your change is ready for commit.</p>
+                    <img src="images/tutorial1/commit3.png">
+                    <p>5. Go to ‘Version Control’ tab -> ‘Local Changes’ tab.
+                    </p>
+                    <p>6. Click on the ‘Commit’ button as shown in the image.
+                    </p>
+                    <img src="images/tutorial1/commit4.png">
+                    <p>7. The first section in ‘Commit Changes’ pop-up window shows the files in which you have made changes.
+                        You can select which files changes to get committed. By default all the files with changes will be
+                        selected.
+                    </p>
+                    <p>8. You can add a commit message which is useful to describe what was the commit about in simple words.</p>
+                    <p>9. In “Diff” section you can see the difference between the same file’s state before and after you made
+                        the change. It is used to review your change before you finally commit it.</p>
+                    <p>10. Click on ‘Commit’.</p>
+                    <p>11. If you get following message just click on ‘Commit’ ignoring the warning. Since it is a very simple
+                        change, the warning won’t affect the functionality of the application and code.</p>
+                    <img src="images/tutorial1/commit5.png">
+                    <img src="images/tutorial1/commit6.png">
+                    <p>12. You should see a message at the bottom of the screen.</p>
+                    <p>13. Click on ‘Log’. This will show you all the details about all the commits. To see details about a
+                        particular commit, double click on it. </p>
+                    <img src="images/tutorial1/commit7.png">
+
+                </section>
+                <hr>
+                <section id="codebranch">
+                    <p>
+                        <b>Branching in GitHub: </b>
+                    </p>
+                    <p>Whatever changes you made till now were done in ‘Master’ Branch i.e. main branch of the development.
+                        To check this fact, you can look at bottom right of your screen which shows text ‘Git:master’. This
+                        tells you that you are currently working in master branch.</p>
+                    <img src="images/tutorial1/commit8.png">
+                    <p>Github offers a feature called ‘branching’ with which we can create branches other than master branch.
+                        This usually done when you diverge from the main line of development and continue to do work without
+                        messing with that main line. </p>
+                    <p>Consider a tree for example. A tree always has some branches along with the large trunk. Similarly, branches
+                        in Git are smaller parts of the project which need not interfere with the main branch (recall master).
+                        They have their own commits and are added to master once they are completed. The master branch is
+                        like the trunk of a tree. In most cases, the code contained in the master branch is usually the one
+                        being deployed. So Let’s Create a Branch.
+                    </p>
+                    <p>1. click on Git:master -> plus 'New Branch'
+                    </p>
+                    <p>2. Give name 'SubBranch' to your new branch and click ok. </p>
+                    <p>Note: Observe the checkbox 'Checkout branch'. 'Checkout' in github means 'switching' to a particular
+                        branch. In this case this checkbox is checked which means that upon creating your new branch you
+                        will switch to this new branch.
+                    </p>
+                    <p>3. See the pop-up msg at the bottom of the IDE on Version Control tab. Also notice at right bottom that
+                        your branch is changed to 'Git:SubBranch'. See the image.
+                    </p>
+                    <p>4. Let's make a change in this branch. Change the text to 'Hello SubBranch !' in layout.
+                    </p>
+                    <p>5. Now commit the change with the message 'Hello SubBranch'. Refer Images.
+                    </p>
+                    <img src="images/tutorial1/commit9.png">
+                    <img src="images/tutorial1/commit10.png">
+                    <img src="images/tutorial1/commit11.png">
+                    <img src="images/tutorial1/commit12.png">
+                    <img src="images/tutorial1/commit13.png">
+                    <img src="images/tutorial1/commit14.png">
+                    <img src="images/tutorial1/commit15.png">
+
+                </section>
+                <hr>
+                <section id="codepushbranch">
+                    <!--Last Part-->
+                    <p>
+                        <b>Pushing Created Branch to Github:</b>
+                    </p>
+                    <p>Remember, to reflect all the changes you make in local repository to remote repository (Github), you
+                        need to push the commits to the remote repository.
+                    </p>
+                    <p>6. Right click on the project name as shown in the image and go Git -> Repository -> 'Push'. This will
+                        upload all the changes to remote repository.
+                    </p>
+                    <p>To check if it had uploaded successfully or not, go to your github account, then go to your repository.
+                    </p>
+                    <p>
+                        You should see a highlighted row which mentions your branch name along with the button 'Compare and Pull request'. You will
+                        learn about pull requests in the next tutorial.
+                    </p>
+                    <img src="images/tutorial1/commit16.png">
+                    <img src="images/tutorial1/commit17.png">
+                    <img src="images/tutorial1/commit18.png">
+                    <img src="images/tutorial1/commit19.png">
+
+                </section>
+                <hr>
+                <section id="codemerge">
+                    <p>
+                        <b>
+                            Merging in GitHub:
+                        </b>
+                    </p>
+                    <p>We created branches with the hope that someday they would help the tree grow into its final form.</p>
+                    <p>Merging combines the changes from both branches to form one cohesive branch. It also combines all the
+                        commits from the branches. The branch being merged isn't deleted, it's still available and you can
+                        keep working on it even after you've merged it.</p>
+                    <p>Let’s merge our branches ‘master’ and ‘SubBranch’.
+                    </p>
+                    <p>1. First you need to checkout(Switch) to the master branch for merging. Click on ‘Git:SubBranch’ -> master(Local
+                        Branches) -> Checkout.
+                    </p>
+                    <p>2. Click on ‘Git:master’ -> ‘SubBranch’ -> ‘Merge’
+                    </p>
+                    <img src="images/tutorial1/commit20.png">
+                    <img src="images/tutorial1/commit21.png">
+                    <img src="images/tutorial1/commit22.png">
+                    <p>3. On Version Control tab you will see the corresponding pop-up message. As this was a simple merge there
+                        were no errors i.e. no ‘Merge Conflicts’. As we start to merge branches with more changes we will
+                        learn about solving ‘Merge Conflicts’. </p>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

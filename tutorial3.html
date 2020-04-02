@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        p {
+            padding-top: 20px;
+        }
+
+        .sidenav {
+            width: 180px;
+            position: fixed;
+            z-index: 1;
+            top: 60px;
+            left: 10px;
+            background: #eee;
+            overflow-x: hidden;
+            padding: 8px 0;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #2196F3;
+            display: block;
+        }
+
+        .section {
+            padding-top: 20px;
+        }
+
+        .sidenav a:hover {
+            color: #064579;
+        }
+
+        .main {
+            margin-left: 140px;
+            /* Same width as the sidebar + left position in px */
+            font-size: 18px;
+            /* Increased text to enable scrolling */
+            padding: 100px 100px;
+
+            padding-top: 20px;
+
+        }
+
+        img {
+            border: 1px solid #021a40;
+        }
+
+        b {
+            font-size: 24px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body style="height:1500px">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">SWEN 101 - Software Engineering Freshmen Seminar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="sidenav">
+            <a href="#ui">Part 1: Working with Using Interface</a>
+            <a href="#layouts">Android Layouts</a>
+            <a href="#functionality">Part 2: Adding the Functionality using Java</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Tutorial 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial2.html">Tutorial 2</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./tutorial3.html">Tutorial 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial4.html">Tutorial 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tutorial5.html">Tutorial 5</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main" style="margin-top:50px">
+        <h3>
+            <b>Introduction to Layouts and Object Oriented Programming
+            </b>
+        </h3>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    <b>Objectives:</b> In this tutorial you will learn about arrangement of visual elements and Object oriented
+                    programming(OOP) concepts. At the end of the session you will be able to,
+
+                </p>
+                <ul>
+                    <li>
+                        Create Activities
+                    </li>
+                    <li>
+                        Create Buttons
+                    </li>
+                    <li>
+                        Understand the difference between Relative, Linear and Grid layout. Write program to provide functionality to your android
+                        project using OOP concepts
+
+                    </li>
+                </ul>
+                We are going to create a simple application as shown below,
+                <br> This is Page 1 of our application. It consists of two elements which are shown by arrows.
+                <br>
+
+                <img src="images/tutorial3/img1.png">
+                <p>First, text ‘Page 1!’ which is bold and italic.
+                    <br> Second, a button named ‘GO TO PAGE 2’. Clicking on this button will switch the screen to page 2 which
+                    is shown as below.
+                </p>
+                <img src="images/tutorial3/img2.png">
+                <p>This is the page 2 with the same elements. Clicking on button ‘GO TO PAGE1’ should take us to previous screen.</p>
+                <p>Let’s first open the project which you created in tutorial 1. Go to File -> Open </p>
+                <img src="images/tutorial3/img3.png">
+                <img src="images/tutorial3/img4.png">
+                <p>Go to the directory where the project was stored and click ‘OK’.</p>
+
+                <section id="ui">
+                    <b>Part 1: Working with User Interface</b>
+                    <p>First Open the activity 1 editor window in ‘Design’ Mode.
+                    </p>
+                    <ul>
+                        <li>
+                            open the activity 1 xml file in 'Design' Mode.
+                        </li>
+                        <li>
+                            Double click on the text which is currently 'subbranch'. It should open attribute window.
+                        </li>
+                        <li>
+                            Change the text to 'Page 1!'.
+                        </li>
+                        <li>
+                            Make the text Bigger by changing the textSize to 30sp.
+                        </li>
+                        <li>
+                            Make it Bold and Italic. Refer the attached screenshot.
+                        </li>
+                    </ul>
+                    <img src="images/tutorial3/img5.png">
+
+                </section>
+                <section id="button">
+                    <p>
+                        <b>Let's Add a button.
+                        </b>
+                    </p>
+                    <ul>
+                        <li>
+                            Go to palette click on Buttons group
+                        </li>
+                        <li>
+                            Now you can drag and drop the button from palette to directly on your application's screen. To do that click on button and
+                            hold on second the second click.
+
+                        </li>
+                        <li>
+                            Drop it below the text.
+
+                        </li>
+                        <li>
+                            Double click on it to bring the properties window of your button.
+                        </li>
+                        <li>
+                            Change its text to 'GO TO PAGE 2'
+                        </li>
+                    </ul>
+                    <img src="images/tutorial3/img6.png">
+                    <img src="images/tutorial3/img7.png">
+                </section>
+                <section id="buttontwo">
+                    <p>
+                        <b>Let's create our second page which will be our second activity.
+                        </b>
+                    </p>
+                    <ul>
+                        <li>
+                            Right click on name of your application.
+
+                        </li>
+                        <li>
+                            Go to New -> Activity -> Empty Activity
+
+
+                        </li>
+                        <li>
+                            Give Activity name as 'activity_2'
+
+
+                        </li>
+                        <li>
+                            Click on 'Finish'.
+
+                        </li>
+                    </ul>
+                    <img src="images/tutorial3/img8.png">
+                    <img src="images/tutorial3/img9.png">
+                </section>
+                <p>
+                    <b>Now edit the text and add a button as shown in the image below. Follow previous instructions.
+
+                    </b>
+                </p>
+                <img src="images/tutorial3/img10.png">
+                <p>Now open any one of xml file in 'Text' mode.
+                </p>
+                <p>Let's learn some basic concepts related to User Interfaces in Android.
+                </p>
+                <hr>
+                <section id="layouts">
+                    <p>
+                        <b>Android Layouts:</b>
+                    </p>
+                    <p>An Android layout is a class that handles arranging the way its elements appear on the screen.
+                    </p>
+                    <p>There are some standard layouts in android which are widely used explained as follows.
+                    </p>
+                    <p>
+                        <b>1. Linear Layout:</b> LinearLayout is a view group that aligns all children in a single direction,
+                        vertically or horizontally.
+                    </p>
+                    <img src="images/tutorial3/img11.png">
+                    <p>
+                        <b>2. Relative Layout</b> RelativeLayout is a view group that displays child views in relative positions.
+                        The position of each view can be specified as relative to sibling elements (such as to the left-of
+                        or below another view) or in positions relative to the parent RelativeLayout area (such as aligned
+                        to the bottom, left or center).
+                    </p>
+                    <img src="images/tutorial3/img12.png">
+                    <p>
+                        <b>3. Grid Layout:</b> GridLayout uses a grid of infinitely-thin lines to separate its drawing area
+                        into: rows, columns, and cells. It supports both row and column spanning, this means it is possible
+                        to merge adjacent cells into a large cell (a rectangle) to contain a View.
+                    </p>
+                    <img src="images/tutorial3/img13.png">
+                    <p>Let's Check which layout is used by observing the xml file from top. </p>
+                    <p>
+                        On the second line it say's 'ConstraintLayout' which is followed by 'android.support.constraint'.
+                    </p>
+                    <p>
+                        <b>4. ConstraintLayout :</b> It is the most recent type of layout which was introduced in android on
+                        May 30, 2016. Previously for the more complex User Interfaces, mixture or different layouts e.g linear
+                        and Relative layouts were used. But Constraint Layout is efficient enough to create complex UI hence
+                        avoiding the complexities. It is the default layout in Android Studio.
+                    </p>
+                </section>
+                <hr>
+                <section id="functionality">
+                    <p>
+                        <b>Part 2: Adding the Functionality using Java:</b>
+                    </p>
+                    <ul>
+                        <li>
+                            go to Project Window
+                        </li>
+                        <li>
+                            open in 'Android' Scope
+                        </li>
+                        <li>
+                            expand 'app' -> 'java' -> 'com.example.username.helloworld'
+                        </li>
+                        <li>
+                            Open 'Activity1.java;
+                        </li>
+                        <li>
+                            Enter the following code as displayed in the image.
+                        </li>
+                    </ul>
+                    <img src="images/tutorial3/img14.png">
+                    <p>Note: the package name will be different in your case after ‘com.example.’.</p>
+                    <p>Let's understand some basic concepts of Object Oriented Programming to understand this code.</p>
+                    <p>
+                        <u>Object Oriented Programming:</u>
+                    </p>
+                    <p>It is a type of programming in which programmers define not only the data type of a data structure, but
+                        also the types of operations (functions) that can be applied to the data structure. In this way,
+                        the data structure becomes an object that includes both data and functions. In addition, programmers
+                        can create relationships between one object and another. For example, objects can inherit characteristics
+                        from other objects.</p>
+                    <p>One of the principal advantages of object-oriented programming techniques over procedural programming
+                        techniques is that they enable programmers to create modules that do not need to be changed when
+                        a new type of object is added. A programmer can simply create a new object that inherits many of
+                        its features from existing objects. This makes object-oriented programs easier to modify.</p>
+                    <p>
+                        <u>Object:</u>
+                    </p>
+                    <p>Objects are the basic run-time entities in an object-oriented system. Programming problem is analyzed
+                        in terms of objects and nature of communication between them. When a program is executed, objects
+                        interact with each other by sending messages. Different objects can also interact with each other
+                        without knowing the details of their data or code.</p>
+                    <p>An object is an instance of a class. A class must be instantiated into an object before it can be used
+                        in the software. More than one instance of the same class can be in existence at any one time.</p>
+                    <p>
+                        <u>Class:</u>
+                    </p>
+                    <p>A class is a collection of objects of a similar type. Once a class is defined, any number of objects
+                        can be created which belong to that class. A class is a blueprint, or prototype, that defines the
+                        variables and the methods common to all objects of a certain kind.
+                    </p>
+                    <p>
+                        <u>Instance:</u>
+                    </p>
+                    <p>The instance is the actual object created at runtime. One can have an instance of a class or a particular
+                        object.</p>
+                    <p>
+                        <u>State:</u>
+                    </p>
+                    <p>The set of values of the attributes of a particular object is called its state. The object consists of
+                        state and the behaviour that's defined in the object's class.</p>
+                    <p>
+                        <u>Method:</u>
+                    </p>
+                    <p>Method describes the object’s abilities. A Dog has the ability to bark. So bark() is one of the methods
+                        of the Dog class.</p>
+                    <p>
+                        <u>Message Passing: </u>
+                    </p>
+                    <p>The process by which an object sends data to another object or asks the other object to invoke a method.
+                        Message passing corresponds to "method calling".
+                    </p>
+                    <p>
+                        <u>Abstraction:</u>
+                    </p>
+                    <p>Abstraction refers to the act of representing essential features without including the background details
+                        or explanations. Classes use the concept of abstraction and are defined as a list of abstract attributes.</p>
+                    <p>
+                        <u>Encapsulation:</u>
+                    </p>
+                    <p>It is the mechanism that binds together code and data in manipulates, and keeps both safe from outside
+                        interference and misuse. In short, it isolates a particular code and data from all other codes and
+                        data. A well-defined interface controls the access to that particular code and data. The act of placing
+                        data and the operations that perform on that data in the same class. The class then becomes the 'capsule'
+                        or container for the data and operations.</p>
+                    <p>Storing data and functions in a single unit (class) is encapsulation. Data cannot be accessible to the
+                        outside world and only those functions which are stored in the class can access it.
+                    </p>
+                    <p>
+                        <u>Inheritance:</u>
+                    </p>
+                    <p>It is the process by which one object acquires the properties of another object. This supports the hierarchical
+                        classification. Without the use of hierarchies, each object would need to define all its characteristics
+                        explicitly. However, by use of inheritance, an object need only define those qualities that make
+                        it unique within its class. It can inherit its general attributes from its parent. A new sub-class
+                        inherits all of the attributes of all of its ancestors.</p>
+                    <p>
+                        <u>Polymorphism:</u>
+                    </p>
+                    <p>Polymorphism means the ability to take more than one form. An operation may exhibit different behaviours
+                        in different instances. The behaviour depends on the data types used in the operation.</p>
+                    <p>It is a feature that allows one interface to be used for a general class of actions. The specific action
+                        is determined by the exact nature of the situation. In general, polymorphism means "one interface,
+                        multiple methods", This means that it is possible to design a generic interface to a group of related
+                        activities. This helps reduce complexity by allowing the same interface to be used to specify a general
+                        class of action. It is the compiler's job to select the specific action (that is, method) as it applies
+                        to each situation.</p>
+                    <p>Remember that this Activity1.java is a backend file for activity_1.xml file. </p>
+                    <ul>
+                        <li>
+                            all the import statements used to import the necessary files and packages which contains methods and classes with predefined
+                            functionality.
+                        </li>
+                        <li>
+                            every functionality is need to be written in class Activity1 {.....} which extends(inherits) class AppCompatActivity.
+                        </li>
+                        <li>
+                            Defined a variable named 'button' of type 'Button' to hold values related to the button we used in UI. 'private' is an access
+                            modifier which means this variable can only be used within this class.
+                        </li>
+                        <li>
+                            onCreate() is a method used to defines the actions to be taken when this activity is initiated. i.e. when this page is loaded.
+                            It is protected to it can be used in the classes which inherites this class.
+                        </li>
+                        <li>
+                            'Bundle savedInstanceState' : The savedInstanceState is a reference to a Bundle object that is passed into the onCreate method
+                            of every Android Activity. Activities have the ability, under special circumstances, to restore
+                            themselves to a previous state using the data stored in this bundle. If there is no available
+                            instance data, the savedInstanceState will be null. For example, the savedInstanceState will
+                            always be null the first time an Activity is started, but may be non-null if an Activity is destroyed
+                            during rotation.
+                        </li>
+                        <li>
+                            setContentView(R.layout.activity_1):
+                            <p>R means Resource</p>
+                            <p>layout means design</p>
+                            <p>activity_1 is the xml you have created under res->layout->acitivity_1.xml</p>
+                            <p>Whenever you want to change your current Look of an Activity or when you move from one Activity
+                                to another . The other Activity must have a design to show . So we call this method in onCreate
+                                and this is the second statement to set the design
+                            </p>
+                        </li>
+                        <li>
+                            In next line the id of the button is assigned to the 'button' variable using 'findViewById()' method.
+                        </li>
+                        <li>
+                            What should happen when user clicks that button ? to define that, 'setOnClickListener()' method is used. First we are creating
+                            new object and then calling 'onClick()' method by passing that object. Here we are defining that
+                            method named 'openActivity2()' should be called.
+                        </li>
+                        <li>
+                            An intent is an abstract description of an operation to be performed. It can be used to launch another activity. So inside
+                            openActivity2() method, object 'intent' of 'Intent' type is created and the Activity2 class is
+                            passed as a value. Then 'intent' variable is passed to 'startActivity' method which is used to
+                            start a new activity, in this case, Activity2.
+                        </li>
+                        <li>
+                            Now go to Activity2.java and write the following code in it. Refer the following image.
+                        </li>
+                        <img src="images/tutorial3/img15.png">
+                        <li>
+                            Save all the changes and run the application.
+                        </li>
+                        <li>
+                            Push all the changes to your GitHub repository which you have learnt in Tutorial 1. (Add -> Commit -> Push)
+                        </li>
+                    </ul>
+                    <p>
+                        <u>Advantages of OOP:</u>
+                    </p>
+                    <ul>
+                        <li>
+                            Object-Oriented Programming has the following advantages over conventional approaches.
+                        </li>
+                        <li>
+                            OOP provides a clear modular structure for programs which makes it good for defining abstract data types where implementation
+                            details are hidden and the unit has a clearly defined interface.
+                        </li>
+                        <li>
+                            OOP makes it easy to maintain and modify existing code as new objects can be created with small differences to existing ones.
+                        </li>
+                        <li>
+                            OOP provides a good framework for code libraries where supplied software components can be easily adapted and modified by
+                            the programmer.
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
